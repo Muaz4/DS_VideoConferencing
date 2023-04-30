@@ -14,7 +14,9 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
@@ -30,7 +32,7 @@ import javax.swing.JScrollPane;
 
 public class Client {
 
-    private static final int PORT = 5000;
+    private static final int PORT = 8000;
     private static final String SERVER_ADDRESS = "10.194.109.15";
     private static final int FRAME_WIDTH = 640;
     private static final int FRAME_HEIGHT = 480;
@@ -53,6 +55,7 @@ public class Client {
     public Client() {
         initializeGUI();
         connectToServer();
+
        
     }
 
@@ -100,6 +103,7 @@ public class Client {
             inputStream = new ObjectInputStream(socket.getInputStream());
         } catch (IOException e) {
             e.printStackTrace();
-        }
-    }}
+        }}}
+   
 
+   
